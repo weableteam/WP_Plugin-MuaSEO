@@ -1,0 +1,61 @@
+#muaseo-button {
+    min-width: 150px;
+    background-image: url(../images/btn.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.muaseo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.muaseo-text-wrapper.hide {
+    display: none!important;
+}
+
+.muaseo-text-wrapper {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(249,158,62,1) 0%, rgba(245,86,84,1) 100%);
+    display: block;
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.muaseo-text-wrapper .muaseo-copy {
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/copy.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.muaseo-text-wrapper .muaseo-copy:active,
+.muaseo-text-wrapper .muaseo-copy:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.muaseo-text-wrapper #muaseo-text {
+    font-weight: bold;
+}
