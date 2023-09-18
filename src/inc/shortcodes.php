@@ -3,7 +3,7 @@ function muaseo_shortcode() {
     ob_start();
     ?>
     <div class="muaseo-wrapper">
-        <button id="muaseo-button"></button>
+        <button id="muaseo-button">Lấy mã</button>
         <div id="muaseo-countdown"></div>
     </div>
     <div class="muaseo-text-wrapper hide">
@@ -19,19 +19,21 @@ function muaseo_shortcode() {
                 var textToShow = '<?php echo esc_html(get_option('muaseo_text', 'Kết thúc đếm ngược!')); ?>';
 
                 var countdownInterval;
+                var btn = $('#muaseo-button');
                 var countdownElement = $('#muaseo-countdown');
                 var textElement = $('#muaseo-text');
 
                 function startCountdown() {
-                    countdownElement.text('Đợi ' + countdown + 's');
+                    btn.text('Đợi ' + countdown + 's');
 
                     countdownInterval = setInterval(function() {
                         countdown--;
-                        countdownElement.text('Đợi ' + countdown + 's');
+                        btn.text('Đợi ' + countdown + 's');
 
                         if (countdown <= 0) {
                             clearInterval(countdownInterval);
-                            countdownElement.hide();
+                            //countdownElement.hide();
+                            btn.text('Hoàn tất');
                             $('.muaseo-text-wrapper').removeClass('hide');
                             textElement.text(textToShow);
                         }
@@ -40,6 +42,7 @@ function muaseo_shortcode() {
 
                 $('#muaseo-button').click(function() {
                     startCountdown();
+                    $(this).prop('disabled', true);
                 });
 
                 $('.muaseo-copy').click(function() {

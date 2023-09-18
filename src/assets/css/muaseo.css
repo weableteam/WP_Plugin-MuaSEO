@@ -1,6 +1,6 @@
 #muaseo-button {
     min-width: 150px;
-    background-image: url(../images/btn.webp);
+    background-image: url(../images/btn-muaseo.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -10,6 +10,9 @@
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    color: #fff;
+    padding-left: 40px;
+    font-weight: bold;
 }
 .muaseo-wrapper {
     display: flex;
