@@ -1,18 +1,27 @@
+@font-face {
+    font-family: 'Avo';
+    src: url('../fonts/UTM-Avo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 #muaseo-button {
-    min-width: 150px;
+    min-width: 170px;
     background-image: url(../images/btn-muaseo.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 50px;
+    height: 60px;
     border: none;
     box-shadow: none;
     outline: none;
     background-color: transparent;
     cursor: pointer;
     color: #fff;
-    padding-left: 40px;
+    padding-left: 50px;
     font-weight: bold;
+    font-family: 'Avo',sans-serif;
+    text-transform: uppercase;
 }
 .muaseo-wrapper {
     display: flex;
@@ -35,6 +44,7 @@
     font-size: .9rem;
     display: flex;
     align-items: center;
+    font-family: 'Avo',sans-serif;
     justify-content: center;
 }
 
@@ -61,4 +71,5 @@
 
 .muaseo-text-wrapper #muaseo-text {
     font-weight: bold;
+    padding-left: 10px;
 }

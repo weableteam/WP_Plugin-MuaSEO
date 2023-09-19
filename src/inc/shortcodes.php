@@ -4,7 +4,6 @@ function muaseo_shortcode() {
     ?>
     <div class="muaseo-wrapper">
         <button id="muaseo-button">Lấy mã</button>
-        <div id="muaseo-countdown"></div>
     </div>
     <div class="muaseo-text-wrapper hide">
         <div class="">Mã code: </div>
@@ -24,7 +23,7 @@ function muaseo_shortcode() {
                 var textElement = $('#muaseo-text');
 
                 function startCountdown() {
-                    btn.text('Đợi ' + countdown + 's');
+                    btn.prop('disabled', true);
 
                     countdownInterval = setInterval(function() {
                         countdown--;
@@ -37,12 +36,15 @@ function muaseo_shortcode() {
                             $('.muaseo-text-wrapper').removeClass('hide');
                             textElement.text(textToShow);
                         }
+
                     }, 1000);
+
                 }
 
                 $('#muaseo-button').click(function() {
                     startCountdown();
-                    $(this).prop('disabled', true);
+
+                    
                 });
 
                 $('.muaseo-copy').click(function() {
@@ -74,6 +76,7 @@ function muaseo_shortcode() {
                     tabActive = false;
                     clearInterval(countdownInterval);
                 });
+                
             });
         })(jQuery);
     </script>

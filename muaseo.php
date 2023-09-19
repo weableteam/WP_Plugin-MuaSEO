@@ -2,7 +2,7 @@
 /*
 Plugin Name: muaseo
 Description: Plugin đếm ngược và hiển thị đoạn text - Phát triển bởi MuaSeo.
-Version: 1.0.3
+Version: 1.0.4
 */
 
 // Plugin define
